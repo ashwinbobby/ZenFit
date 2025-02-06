@@ -1,0 +1,40 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color:beige;
+}
+nav{
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 5px 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    font-size: 20px;
+    transition: all 500ms;
+    font-size-adjust: 20px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    padding: 10px;
+}
+div{
+    padding: 10px;
+}
