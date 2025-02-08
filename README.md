@@ -1,1 +1,1 @@
-# ZenFit
+# ZenFit app
