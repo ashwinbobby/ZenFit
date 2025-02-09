@@ -9,7 +9,7 @@
 body {
     background: 
        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(8, 8, 159, 0.8)), 
-       url('image.png') no-repeat center center/cover;
+       url('Images/image.png') no-repeat center center/cover;
     background-size: cover;  /* Ensures the background image covers the entire area */
     background-attachment: fixed;  /* Keeps the background fixed during scroll */
     display: flex;
