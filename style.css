@@ -1,0 +1,109 @@
+/* Video background container */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Video styling */
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150px;
+    color: aliceblue;
+  }  
+.navbar-inner {
+    background:transparent;
+}
+nav{
+    color: white;
+    text-align: center;
+    padding: 5px;
+    background-color: transparent;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 5px 20px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    font-size: 20px;
+    transition: all 500ms;
+    font-size-adjust: 20px;
+}
+/* Center everything on the page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+  /* Restrict max width for better readability */
+  .content {
+    max-width: 800px; /* Adjust as needed */
+    width: 90%;
+    margin: auto;
+}
+  
+  /* Float images properly while keeping text aligned */
+  .leftFloat {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 150px; /* Adjust size as needed */
+}
+  
+  .rightFloat {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 150px; /* Adjust size as needed */
+}
+  
+  /* Paragraph styling */
+p {
+    overflow: hidden; /* Prevents layout breaking */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left; /* Ensures readability */
+}
+  
+  /* Center the main heading */
+h1 {
+    text-align: center;
+}
+  
+  
