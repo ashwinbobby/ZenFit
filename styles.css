@@ -22,53 +22,36 @@
 
 /* Navbar on Video */
 
-.navbar {
-    width: 100%;
-    position: fixed;
+nav {
+    position: absolute;
     top: 0;
-    left: 0;
-    background: transparent;
-    backdrop-filter: blur(0px);
-    padding: 1rem 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    padding: 15px 0;
     text-align: center;
 }
 
-.navbar ul {
+nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
-.navbar ul li {
-    display: inline;
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-.navbar ul li a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    display:inline-block;
+    transition: all 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: yellow; /* Changes text color to yellow */
-    transform: scale(1.4); /* Increases size to 1.2x */
-}
-
-.navbar ul li a::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background: yellow;
-    transition: width 0.4s ease-in-out;
-}
-
-.navbar ul li a:hover::after {
-    width: 100%;
+nav ul li a:hover {
+    font-size: 22px;
+    color: yellow;
 }
 
 /* Welcome Text */
