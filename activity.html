@@ -1,174 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Activity - Fitness Hub</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet">
-      <style>
-        .activity {
-            margin: 0;
-            padding: 50px 0;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            text-align: center;
-        }
-    
-        .activity h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #e2e8f0;
-        }
-    
-        .activity-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-    
-        .option {
-            background-size: cover; 
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-            width: 80%;
-            height:300px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            color: white;
-        }
-    
-        .option::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-        }
-    
-        .option:hover {
-            transform: translateY(-5px);
-        }
-    
-        .option h3, .option p, .option button {
-            position: center;
-            z-index: 2;
-        }
-    
-        .option h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #e2e8f0;
-        }
-    
-        .option p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #e2e8f0;
-            text-align: center;
-        }
-    
-        .option button {
-            background: darkmagenta;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0px 4px 10px rgba(255, 117, 140, 0.5);
-        }
-    
-        .option button:hover {
-            background: linear-gradient(135deg, #ff5ae6, #ff3cf2);
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(255, 92, 212, 0.6);
-        }
-        body{
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-        }
+      rel="stylesheet"
+    />
+    <style>
+      .activity {
+        margin: 0;
+        padding: 50px 0;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+        text-align: center;
+      }
+
+      .activity h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #e2e8f0;
+      }
+
+      .activity-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .option {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        height: 300px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        color: white;
+      }
+
+      .option::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+      }
+
+      .option:hover {
+        transform: translateY(-5px);
+      }
+
+      .option h3,
+      .option p,
+      .option button {
+        position: center;
+        z-index: 2;
+      }
+
+      .option h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #e2e8f0;
+      }
+
+      .option p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #e2e8f0;
+        text-align: center;
+      }
+
+      .option button {
+        background: darkmagenta;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0px 4px 10px rgba(255, 117, 140, 0.5);
+      }
+
+      .option button:hover {
+        background: linear-gradient(135deg, #ff5ae6, #ff3cf2);
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(255, 92, 212, 0.6);
+      }
+      body {
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+      }
     </style>
-    
-    
-</head>
-<body>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="activity.html">Activity Statistics</a></li>
+        <li><a href="food.html">Food Recommendations</a></li>
+        <li><a href="log.html">SIGN-IN / SIGN-UP</a></li>
+      </ul>
+    </nav>
     <header>
-        <h1>ZenFit</h1>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="activity.html">Activity Statistics</a></li>
-              <li><a href="food.html">Food Recommendations</a></li>
-              <li><a href="log.html">SIGN-IN / SIGN-UP</a></li>
-            </ul>
-          </nav>
+      <h1>ZenFit</h1>
     </header>
     <section class="activity">
-        <h2>Track Your Activity</h2>
-        <div class="activity-options">
-            <div class="option" style="background-image: url(./Images/watch.jpg);">
-                <h3>Connect to Watch</h3>
-                <p>Sync your smartwatch to track your fitness stats in real-time.</p>
-                <button>Connect</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/connect_to_phone.png);">
-                <h3>Connect to Phone</h3>
-                <p>Use your phone's sensors to monitor steps, heart rate, and more.</p>
-                <button>Connect</button>
-            </div>
-            <div class= "option" style="background-image: url(./Images/BMI.jpg)";>
-                <h3>Check Your BMI</h3>
-                <p>Calculate your Body Mass Index (BMI) to assess your fitness level.</p>
-                <button>Calculate</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/steps.jpg);">
-                <h3>Step Counter</h3>
-                <p>Monitor your daily steps and stay active throughout the day.</p>
-                <button>View Steps</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/heart_rate.jpg);">
-                <h3>Heart Rate Monitor</h3>
-                <p>Track your heart rate to ensure optimal workout intensity.</p>
-                <button>Measure</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/calories.jpg);">
-                <h3>Calories Burned</h3>
-                <p>Estimate the calories you've burned based on your activity.</p>
-                <button>Calculate</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/hydration.jpg);">
-                <h3>Hydration Tracker</h3>
-                <p>Log your water intake to stay hydrated throughout the day.</p>
-                <button>Log Water</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/sleep.jpg);">
-                <h3>Sleep Analysis</h3>
-                <p>Monitor your sleep patterns to improve your recovery.</p>
-                <button>Track Sleep</button>
-            </div>
-            <div class="option" style="background-image: url(./Images/workout.jpg);">
-                <h3>Workout Progress</h3>
-                <p>View your workout history and track progress over time.</p>
-                <button>View Progress</button>
-            </div>
+      <h2>Track Your Activity</h2>
+      <div class="activity-options">
+        <div class="option" style="background-image: url(./Images/watch.jpg)">
+          <h3>Connect to Watch</h3>
+          <p>Sync your smartwatch to track your fitness stats in real-time.</p>
+          <button>Connect</button>
         </div>
+        <div
+          class="option"
+          style="background-image: url(./Images/connect_to_phone.png)"
+        >
+          <h3>Connect to Phone</h3>
+          <p>
+            Use your phone's sensors to monitor steps, heart rate, and more.
+          </p>
+          <button>Connect</button>
+        </div>
+        <div class="option" style="background-image: url(./Images/BMI.jpg)" ;>
+          <h3>Check Your BMI</h3>
+          <p>
+            Calculate your Body Mass Index (BMI) to assess your fitness level.
+          </p>
+          <button>Calculate</button>
+        </div>
+        <div class="option" style="background-image: url(./Images/steps.jpg)">
+          <h3>Step Counter</h3>
+          <p>Monitor your daily steps and stay active throughout the day.</p>
+          <button>View Steps</button>
+        </div>
+        <div
+          class="option"
+          style="background-image: url(./Images/heart_rate.jpg)"
+        >
+          <h3>Heart Rate Monitor</h3>
+          <p>Track your heart rate to ensure optimal workout intensity.</p>
+          <button>Measure</button>
+        </div>
+        <div
+          class="option"
+          style="background-image: url(./Images/calories.jpg)"
+        >
+          <h3>Calories Burned</h3>
+          <p>Estimate the calories you've burned based on your activity.</p>
+          <button>Calculate</button>
+        </div>
+        <div
+          class="option"
+          style="background-image: url(./Images/hydration.jpg)"
+        >
+          <h3>Hydration Tracker</h3>
+          <p>Log your water intake to stay hydrated throughout the day.</p>
+          <button>Log Water</button>
+        </div>
+        <div class="option" style="background-image: url(./Images/sleep.jpg)">
+          <h3>Sleep Analysis</h3>
+          <p>Monitor your sleep patterns to improve your recovery.</p>
+          <button>Track Sleep</button>
+        </div>
+        <div class="option" style="background-image: url(./Images/workout.jpg)">
+          <h3>Workout Progress</h3>
+          <p>View your workout history and track progress over time.</p>
+          <button>View Progress</button>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
