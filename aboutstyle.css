@@ -1,0 +1,94 @@
+body{
+    margin:0px;
+    padding: 0px;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.navbar {
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display:inline-block;
+}
+
+.navbar ul li a:hover {
+    color: yellow; /* Changes text color to yellow */
+    transform: scale(1.4); /* Increases size to 1.2x */
+}
+
+.navbar ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: yellow;
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+.about {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+.about-content p, h3{
+    text-align: left;
+    padding-left: 20px;
+}
+.team-content{
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+.team-content h3{
+    padding: 0px;
+}
+img {
+    border: 10px solid white;
+}
+
+body {
+    color: white;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 10px;
+}
+
+h1 {
+    
+    color: white;
+}
+header {
+    margin-top: 80px; /* Add enough space to push the header below the navbar */
+    text-align: center;
+    color: white;
+}
