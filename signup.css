@@ -27,12 +27,13 @@ body {
 
 /* Input fields */
 .input-field {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.2);
+    align-items: center;
     color: white;
     font-size: 16px;
     outline: none;
