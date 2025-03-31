@@ -5,8 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
+    <style>
+        /* Fixed Navbar */
+        .navbar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            padding: 1rem 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .navbar ul li a:hover {
+            color: yellow;
+            transform: scale(1.2);
+        }
+
+        .navbar ul li a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background: yellow;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Adjust body to prevent overlap */
+        body {
+            padding-top: 70px;
+        }
+    </style>
 </head>
-<body>
+<body style="background-image: url(./Images/view-gym-room-training-sports.jpg);">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="activity.html">Activity Statistics</a></li>
+            <li><a href="food.html">Food Recommendations</a></li>
+            <li><a href="log.html">SIGN-IN / SIGN-UP</a></li>
+        </ul>
+    </nav>
+    
     <div class="container">
         <h2>Sign Up</h2>
         <form id="signupForm">
