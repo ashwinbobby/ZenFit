@@ -1,0 +1,106 @@
+/* Fullscreen dark background */
+body {
+    background: url('./Images/view-gym-room-training-sports.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Signup container */
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Form heading */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Input fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Placeholder styling */
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Main button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Social login buttons */
+.social-login {
+    margin-top: 15px;
+}
+
+.social-login button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+.google-btn {
+    background: #db4437;
+    color: white;
+}
+
+.facebook-btn {
+    background: #3b5998;
+    color: white;
+}
+
+.google-btn:hover {
+    background: #c1351d;
+}
+
+.facebook-btn:hover {
+    background: #2d4373;
+}
+
+/* Link styling */
+.link {
+    color: lightblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
