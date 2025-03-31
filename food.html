@@ -1,235 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weekly Food Schedule</title>
-    <link rel="stylesheet" href="styles(food).css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food Recommendation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="activity.html">Activity Statistics</a></li>
-        <li><a href="food.html">Food Recommendations</a></li>
-        <li><a href="log.html">SIGN-IN / SIGN-UP</a></li>
-      </ul>
-    </nav>
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto Mono", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            background-image: url('Images/pexels-vanmalidate-842142.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-    <div class="container">
-      <h1>Weekly Food Schedule 🍽️</h1>
+        #meal-plan {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+        }
 
-      <!-- Week Buttons -->
-      <div class="week-buttons">
-        <button class="day-btn" onclick="showDay('Monday')">Monday</button>
-        <button class="day-btn" onclick="showDay('Tuesday')">Tuesday</button>
-        <button class="day-btn" onclick="showDay('Wednesday')">
-          Wednesday
-        </button>
-        <button class="day-btn" onclick="showDay('Thursday')">Thursday</button>
-        <button class="day-btn" onclick="showDay('Friday')">Friday</button>
-        <button class="day-btn" onclick="showDay('Saturday')">Saturday</button>
-        <button class="day-btn" onclick="showDay('Sunday')">Sunday</button>
-      </div>
+        #top-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-      <div id="week">
-        <!-- Monday -->
-        <div class="day" id="Monday">
-          <h2>Monday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img src="Images/Fruit_and_Nut_Oatmeal_.jpg" alt="Breakfast" />
-            <p>Oatmeal with fruits & nuts</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img
-              src="Images/Grown_Strong_Grilled_Chicken_With_Quinoa_Roasted_Vegetables.jpg"
-              alt="Lunch"
-            />
-            <p>Grilled chicken with quinoa & veggies</p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img
-              src="Images/sheet-pan-salmon-and-vegetables-5.jpg"
-              alt="Dinner"
-            />
-            <p>Salmon with roasted vegetables</p>
-          </div>
-        </div>
-        <!-- Tuesday -->
-        <div class="day" id="Tuesday">
-          <h2>Tuesday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img
-              src="Images/whole-wheat-pancakes-recipe-2.jpg"
-              alt="Breakfast"
-            />
-            <p>Whole grain pancakes with honey</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img src="Images/avacado and grilled chicken.jpeg" alt="Lunch" />
-            <p>Avocado & grilled chicken salad</p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img
-              src="images/italian-vegetable-soup-with-cheese-bread.jpg"
-              alt="Dinner"
-            />
-            <p>Vegetable soup with garlic bread</p>
-          </div>
-        </div>
+        li {
+            margin: 20px;
+            list-style: none;
+        }
 
-        <!-- Wednesday -->
-        <div class="day" id="Wednesday">
-          <h2>Wednesday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img
-              src="Images/Banana-Spinach-Smoothie-Featured.jpg"
-              alt="Breakfast"
-            />
-            <p>Green smoothie with spinach & banana</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img src="Images/images.jpeg" alt="Lunch" />
-            <p>Turkey sandwich with whole grain bread</p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img
-              src="Images/whole-wheat-pasta-with-marinara-sauce.jpg"
-              alt="Dinner"
-            />
-            <p>Whole wheat pasta with marinara sauce</p>
-          </div>
-        </div>
+        select {
+            padding: 5px;
+            width: 200px;
+            background-color: black;
+            color: white;
+        }
 
-        <!-- Thursday -->
-        <div class="day" id="Thursday">
-          <h2>Thursday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img src="Images/Best-Egg-Toast-SQ-1.jpg" alt="Breakfast" />
-            <p>Scrambled eggs with toast</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img
-              src="Images/buddha bowl with chikpeas and veggies.jpeg"
-              alt="Lunch"
-            />
-            <p>Buddha bowl with chickpeas and veggies</p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img src="Images/grilled fish with asparagus.jpeg" alt="Dinner" />
-            <p>Grilled fish with steamed asparagus</p>
-          </div>
-        </div>
-        <!-- Friday -->
-        <div class="day" id="Friday">
-          <h2>Friday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img
-              src="Images/Greek-Yogurt-drizzled-with-Honey-and-Walnuts-Yiaourti-me-meli.jpg"
-              alt="Breakfast"
-            />
-            <p>Greek yogurt with honey & almonds</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img src="images/grilledsalmon.png" alt="Lunch" />
-            <p>Simple Grilled Salmon & Vegetables</p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img
-              src="images/chicken-and-broccoli-stir-fry-6-2.jpg"
-              alt="Dinner"
-            />
-            <p>Chicken stir-fry with broccoli</p>
-          </div>
-        </div>
+        .navbar {
+            width: 100%;
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            background: transparent;
+            backdrop-filter: blur(0px);
+            padding: 1rem 0;
+            text-align: center;
+            z-index: 1000;
+        }
 
-        <!-- Saturday -->
-        <div class="day" id="Saturday">
-          <h2>Saturday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img src="images/croissant.jpeg" alt="Breakfast" />
-            <p>Croissant with fresh berries</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img
-              src="./Images/sweetpotato.png"
-              alt="Lunch"
-            />
-            <p>Sweet Potato and Black Bean Burrito </p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img
-              src="images/Spicy-Chickpea-and-Cauliflower-Curry.jpg"
-              alt="Dinner"
-            />
-            <p>Spicy chickpea curry with rice</p>
-          </div>
-        </div>
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+        }
 
-        <!--Sunday-->
-        <div class="day" id="Sunday">
-          <h2>Sunday</h2>
-          <div class="meal">
-            <h3>Breakfast</h3>
-            <img src="images/bagel.jpeg" alt="Breakfast" />
-            <p>Bagel with cream cheese & smoked salmon</p>
-          </div>
-          <div class="meal">
-            <h3>Lunch</h3>
-            <img src="images/italian pasta.jpeg" alt="Lunch" />
-            <p>Italian pasta salad with olives</p>
-          </div>
-          <div class="meal">
-            <h3>Dinner</h3>
-            <img
-              src="images/grilled steak with mashed potatoes.jpeg"
-              alt="Dinner"
-            />
-            <p>Grilled steak with mashed potatoes</p>
-          </div>
-        </div>
-        <!-- Other days follow the same format -->
-      </div>
-    </div>
+        .navbar ul li {
+            display: inline;
+        }
 
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar ul li a:hover {
+            color: yellow;
+            /* Changes text color to yellow */
+            transform: scale(1.4);
+            /* Increases size to 1.2x */
+        }
+
+        .navbar ul li a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            background: yellow;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .transparency {
+            background-color: rgb(0 0 0 / 0.5);
+        }
+    </style>
     <script>
-      function showDay(day) {
-        let days = document.querySelectorAll(".day");
-        days.forEach((d) => (d.style.display = "none"));
+        document.addEventListener("DOMContentLoaded", function () {
+            const mealPlanContainer = document.getElementById("meal-plan");
+            const dayFilter = document.getElementById("day-filter");
 
-        document.getElementById(day).style.display = "block";
-      }
+            async function fetchHealthyMeal(category) {
+                try {
+                    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+                    const data = await response.json();
+                    const randomMeal = data.meals[Math.floor(Math.random() * data.meals.length)].strMeal;
+                    return randomMeal;
+                } catch (error) {
+                    console.error("Error fetching meal data:", error);
+                    return "Unavailable";
+                }
+            }
 
-      // Show Monday by default
-      document.addEventListener("DOMContentLoaded", () => showDay("Monday"));
+            async function fetchMealPlan(day) {
+                const meals = {
+                    breakfast: await fetchHealthyMeal("Vegetarian"),
+                    lunch: await fetchHealthyMeal("Seafood"),
+                    dinner: await fetchHealthyMeal("Chicken")
+                };
+                renderMealPlan(day, meals);
+            }
+
+            function renderMealPlan(day, meals) {
+                mealPlanContainer.innerHTML = `
+                    <h2>Healthy Meal Plan for ${day}</h2>
+                    <ul>
+                        <li><strong>Breakfast:</strong> ${meals.breakfast}</li>
+                        <li><strong>Lunch:</strong> ${meals.lunch}</li>
+                        <li><strong>Dinner:</strong> ${meals.dinner}</li>
+                    </ul>
+                `;
+            }
+
+            dayFilter.addEventListener("change", function () {
+                fetchMealPlan(dayFilter.value);
+            });
+
+            fetchMealPlan(dayFilter.value);
+        });
     </script>
-  </body>
+</head>
+
+<body>
+    <nav class="navbar transparency">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="activity.html">Activity Statistics</a></li>
+          <li><a href="food.html">Food Recommendations</a></li>
+          <li><a href="log.html">SIGN-IN / SIGN-UP</a></li>
+        </ul>
+      </nav>
+    <div class="transparency">
+        <div id="top-content">
+            <h1>Food Recommendation</h1>
+            <label for="day-filter">Select Day:</label>
+            <select id="day-filter">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+        </div>
+
+        <div id="meal-plan"></div>
+    </div>
+</body>
+
 </html>
