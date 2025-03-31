@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".card");
 
-    function checkScroll() {
-        let scrollPos = window.scrollY;
+  function checkScroll() {
+    let scrollPos = window.scrollY;
 
-        cards.forEach(card => {
-            const cardPosition = card.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+    cards.forEach((card) => {
+      const cardPosition = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-            if (cardPosition < windowHeight - 100) {
-                card.classList.add("show");
-            }
-        });
-    }
+      if (cardPosition < windowHeight - 100) {
+        card.classList.add("show");
+      }
+    });
+  }
 
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // Initial check
+  window.addEventListener("scroll", checkScroll);
+  checkScroll(); // Initial check
 });

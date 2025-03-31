@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Exercises</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { text-align: center; font-family: "Roboto Mono", monospace; background-color: #0f172a; }
+        #filterContainer, #exerciseContainer { margin-top: 20px; }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            background: purple;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Roboto Mono", monospace;
+        }
+        .exercise {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        img { width: 100%; border-radius: 5px; }
+        h3, h4 { color: white; }
+    </style>
+</head>
+<body>
+    <h3>Filter by Body Part</h3>
+    <div id="filterContainer"></div>
+    <div id="exerciseContainer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const categories = JSON.parse(localStorage.getItem("categories"));
+            const filterContainer = document.getElementById("filterContainer");
+            
+            categories.forEach(category => {
+                const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+                const filterOption = document.createElement("button");
+                filterOption.textContent = formattedCategory;
+                filterOption.style.fontFamily = "Roboto Mono, monospace";
+                filterOption.addEventListener("click", () => applyFilter(category));
+                filterContainer.appendChild(filterOption);
+            });
+        });
+
+        async function applyFilter(category) {
+            const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${category}`;
+            const options = {
+                method: 'GET',
+                headers: {
+                    'x-rapidapi-key': '5a5b602929msh68ea9f7710aacdfp1e3142jsncdd5d9c5ea34',
+                    'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const exercises = await response.json();
+                const exerciseContainer = document.getElementById("exerciseContainer");
+                exerciseContainer.innerHTML = `<h3>Exercises for ${category.charAt(0).toUpperCase() + category.slice(1)}</h3>`;
+
+                exercises.forEach(exercise => {
+                    const exerciseDiv = document.createElement("div");
+                    exerciseDiv.classList.add("exercise");
+                    
+                    const title = document.createElement("h4");
+                    title.textContent = exercise.name;
+                    
+                    const img = document.createElement("img");
+                    img.src = exercise.gifUrl;
+                    img.alt = exercise.name;
+                    
+                    exerciseDiv.appendChild(title);
+                    exerciseDiv.appendChild(img);
+                    exerciseContainer.appendChild(exerciseDiv);
+                });
+            } catch (error) {
+                console.error("Error fetching exercises:", error);
+            }
+        }
+    </script>
+</body>
+</html>
