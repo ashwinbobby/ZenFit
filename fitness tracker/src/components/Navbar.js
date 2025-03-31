@@ -11,9 +11,8 @@ const Navbar = () => {
         {/* Logo */}
         <Box display="flex" alignItems="center">
           <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", color: "white" }}>
-            <img src={logo} alt="FitForge Logo" style={{ height: 40, marginRight: 10, filter: "invert(100%)" }} />
             <Typography variant="h6" sx={{ color: "#dd5426c2", fontWeight: "bold" }}>
-              FitForge
+              Zenfit
             </Typography>
           </Link>
         </Box>
@@ -23,7 +22,7 @@ const Navbar = () => {
           <Button color="inherit" component={Link} to="/">Home</Button>
           <Button color="inherit" component={Link} to="/workouts">Workouts</Button>
           <Button color="inherit" component={Link} to="/tracker">Tracking</Button>
-          <Button color="inherit" component={Link} to="/diet">Diet</Button>
+          <Button color="inherit" component={Link} to="/food">Food Recommendations</Button>
           <Button color="inherit" component={Link} to="#about">About Us</Button>
         </Box>
 
