@@ -63,6 +63,7 @@ nav ul li a:hover {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
+
 /* Content Section */
 #content {
     width: 100%;
@@ -134,4 +135,102 @@ nav ul li a:hover {
 
 .card:not(.show):nth-child(even) {
     transform: translateX(100px);
+}
+/*footer css*/
+:root{
+    --thmColor: #17cd29c2;
+    --lightthm: #17cd29c2;
+}
+  
+footer{
+    width: 100vw;
+    background: #2a2a2a;
+    padding-top: 25px;
+}
+footer .container{
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer-content{
+    width: 33.3%;
+}
+footer h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width:190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.quick-links{
+    padding: 0;
+    
+}
+.quick-links li{
+    width: auto;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+    text-decoration: none;
+   
+}
+.quick-links li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: var(--thmColor);
+    transition-duration: .5s;
+    
+}
+.quick-links li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: var(--thmColor);
+}
+.social-icons i:hover{
+    color: var(--thmColor);
+}
+.bottom-bar{
+    background: var(--thmColor);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
 }
