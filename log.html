@@ -39,5 +39,30 @@
       </form>
       <p class="signup-text">Don't have an account? <a href="signup.html">Sign up</a></p>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.querySelector("form");
+    
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+    
+          const email = document.querySelector(".input-field[type='email']").value.trim();
+          const password = document.querySelector(".input-field[type='password']").value.trim();
+    
+          // Retrieve stored users array from localStorage
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          const user = users.find(user => user.email === email && user.password === password);
+    
+          if (user) {
+            alert("Login successful! Welcome, " + user.fullName + "!");
+            localStorage.setItem("loggedInUser", email);
+            window.location.href = "index.html"; // Redirect to home page after login
+          } else {
+            alert("Invalid email or password.");
+          }
+        });
+      });
+    </script>
+    
   </body>
 </html>

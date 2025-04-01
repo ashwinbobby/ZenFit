@@ -20,8 +20,42 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
         return;
     }
 
-    alert("Sign-up successful!");
-    // Here, you can send data to backend using AJAX or fetch API
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check if email is already registered
+    if (users.some(user => user.email === email)) {
+        alert("Email already exists. Please use a different email.");
+        return;
+    }
+
+    users.push({ fullName, email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Sign-up successful! You can now log in.");
+    document.getElementById("signupForm").reset();
+});
+
+// Login functionality
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+
+    if (!email || !password) {
+        alert("Please enter both email and password.");
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(user => user.email === email && user.password === password);
+
+    if (user) {
+        alert("Login successful! Welcome, " + user.fullName + "!");
+        // Redirect to a dashboard or homepage if needed
+    } else {
+        alert("Invalid email or password.");
+    }
 });
 
 // Validate email format
