@@ -50,8 +50,8 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: yellow; /* Changes text color to yellow */
-  transform: scale(1.4); /* Increases size to 1.2x */
+  color: yellow; 
+  transform: scale(1.4); 
 }
 
 .navbar ul li a::after {
@@ -68,7 +68,7 @@ body {
 }
 
 .login-container {
-  background: rgba(0, 0, 0, 0.5); /* Dark translucent background */
+  background: rgba(0, 0, 0, 0.5); 
   backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 12px;
@@ -120,7 +120,7 @@ body {
 .signup-text {
   margin-top: 15px;
   font-size: 14px;
-  color: white; /* Ensuring text is visible */
+  color: white; 
 }
 
 .signup-text a {

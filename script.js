@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (cardPosition < windowHeight - 100) {
                 card.classList.add("show");
             } else if (scrollPos < lastScroll) {
-                card.classList.remove("show"); // Reverse animation when scrolling up
+                card.classList.remove("show"); 
             }
         });
 
@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   window.addEventListener("scroll", checkScroll);
-  checkScroll(); // Initial check
+  checkScroll(); 
 });

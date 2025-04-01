@@ -22,7 +22,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if email is already registered
+    
     if (users.some(user => user.email === email)) {
         alert("Email already exists. Please use a different email.");
         return;
@@ -35,7 +35,6 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     document.getElementById("signupForm").reset();
 });
 
-// Login functionality
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -52,24 +51,23 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (user) {
         alert("Login successful! Welcome, " + user.fullName + "!");
-        // Redirect to a dashboard or homepage if needed
     } else {
         alert("Invalid email or password.");
     }
 });
 
-// Validate email format
+
 function validateEmail(email) {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
 }
 
-// Validate password length
+
 function validatePassword(password) {
     return password.length >= 6;
 }
 
-// Social login placeholder function
+
 function socialLogin(provider) {
     alert(provider + " login clicked! (Backend required)");
 }

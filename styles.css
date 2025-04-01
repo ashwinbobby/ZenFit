@@ -1,4 +1,3 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@
   color: white;
 }
 
-/* Fullscreen Video Section */
 #video-section {
   position: relative;
   width: 100%;
@@ -15,14 +13,12 @@
   overflow: hidden;
 }
 
-/* Background Video */
 #background-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Navbar */
 nav {
   position: absolute;
   top: 0;
@@ -121,13 +117,13 @@ nav ul li a:hover {
   margin-right: 5%;
 }
 
-/* Show Animation */
+
 .card.show {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Reverse Animation on Scroll Up */
+
 .card:not(.show):nth-child(odd) {
   transform: translateX(-100px);
 }
@@ -135,7 +131,7 @@ nav ul li a:hover {
 .card:not(.show):nth-child(even) {
   transform: translateX(100px);
 }
-/*footer css*/
+
 :root {
   --thmColor: #17cd29c2;
   --lightthm: #17cd29c2;
